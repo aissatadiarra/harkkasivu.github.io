@@ -16,9 +16,9 @@
         " tiedon haku julkisista palveluista rest-rajapinnan yli"
     ],
       "tekniikat":[
-        { "aihe":"John", "linkki": "https://www.weebly.com/"},
-        { "aihe":"Anna", "linkki": "https://wordpress.com/"},
-        { "aihe":"Peter", "linkki":"https://getbootstrap.com/"},
-        { "aihe":"Peter", "linkki": "https://www.json.org/json-en.html"}
+        { "aihe":"Low-code", "linkki": " https://www.weebly.com/"},
+        { "aihe":"Wordpress", "linkki": " https://wordpress.com/"},
+        { "aihe":"Bootstrap", "linkki": "https://getbootstrap.com/"},
+        { "aihe":"JSON", "linkki": "https://www.json.org/json-en.html"}
     ]
 }
