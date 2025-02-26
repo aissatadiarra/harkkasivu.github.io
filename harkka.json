@@ -1,7 +1,7 @@
 {
-    "otsikko": "JSON-datan käsittelyä",
+    "otsikko": "JSON-datan käsittelyä", "tiedot":{
     "kuvaus": "Tällä sivustolle haetaan JSON-muotoista dataa",
-    "kuva": "https://jaakkola.github.io/json/digi.JPG",
+    "kuva": "https://jaakkola.github.io/json/digi.JPG"},
     "opintojakso": [
         {
             "nimi": "Digitekniikat"
