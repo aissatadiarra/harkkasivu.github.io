@@ -15,22 +15,10 @@
         " responsiivinen käyttöliittymä ja komponentit",
         " tiedon haku julkisista palveluista rest-rajapinnan yli"
     ],
-    "tekniikat": [
-        {
-            "aihe": "low-code",
-            "linkki": "https://www.weebly.com/"
-        },
-        {
-            "aihe": "wordpress",
-            "linkki": "https://wordpress.com/"
-        },
-        {
-            "aihe": "bootstrap",
-            "linkki": "https://getbootstrap.com/"
-        },
-        {
-            "aihe": "JSON",
-            "linkki": "https://www.json.org/json-en.html"
-        }
+      "tekniikat":[
+        { "aihe":"John", "linkki": "https://www.weebly.com/"},
+        { "aihe":"Anna", "linkki": "https://wordpress.com/"},
+        { "aihe":"Peter", "linkki":"https://getbootstrap.com/"},
+        { "aihe":"Peter", "linkki": "https://www.json.org/json-en.html"}
     ]
 }
