@@ -1,0 +1,57 @@
+body,
+main {
+
+    background-color: rgb(186, 241, 241);
+    font-family: 'Pacifico';
+    font-size: 20px;
+    color: rgb(27, 12, 0);
+
+}
+
+
+h1 {
+    font-family: 'Pacifico';
+    text-shadow: 1px 1px rgb(14, 11, 11);
+    color: rgba(136, 23, 180, 0.603);
+}
+
+h2 {
+    font-family: 'Pacifico';
+    color: rgb(27, 12, 0);
+}
+
+a {
+    font-family: 'Pacifico';
+    color: rgb(15, 28, 143);
+    font-size: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: auto;
+    display: flex;
+}
+
+th,
+td {
+    text-align: justify;
+    padding: 8px;
+}
+
+tr {
+    background-color: rgb(118, 149, 175);
+
+}
+
+.weather-icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: px;
+    background-color: rgb(182, 204, 221);
+}
+
+.weather-icons img {
+    width: 100px;
+    height: 100px;
+}
+
