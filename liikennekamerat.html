@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="fi">
+
+<head>
+
+    <title>Liikennekamerat</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="tehtava_1.html">Opintojakso</a></li>
+        <li><a href="toteutus.html">Toteutus</a></li>
+        <li><a href="tapahtumat.html">Tapahtumat</a></li>
+        <li><a href="saa.html">Sää</a></li>
+        <li><a href="liikennekamerat.html">Liikennekamerat</a></li>
+        <li><a href="junat.html">Junat</a></li>
+    </ul>
+
+    <div id="vastaus">
+    </div>
+
+    <script>
+        //Funktio tietojen  ja kuvien hakemiseen
+        function kerro(data) {
+
+            var teksti = "";
+            var lista = data.properties.presets;
+            var aika = data.properties.dataUpdatedTime;
+
+            teksti = "<h1>Ajetaan Tampereelle</h1>";
+            teksti = teksti + "<p>" + "Minkälainen keli siellä on?" + "</p>";
+
+            for (var i = 0; i < lista.length; i++) {
+                //Kelikameroiden aika 
+                teksti = teksti + "<h3>" + aika + "</h3>";
+                //Kelikamerakuvat
+                teksti = teksti + '<img src="' + lista[i].imageUrl + '">';
+            }
+
+            document.getElementById("vastaus").innerHTML = teksti;
+        }
+        // Funktio API-pyyntöön ja vastauksen käsitteleminen
+        fetch('https://tie.digitraffic.fi/api/weathercam/v1/stations/C04507')
+
+            .then(function (response) {
+
+                return response.json();
+            })
+
+            .then(function (responseJson) {
+
+                kerro(responseJson);
+            })
+
+            .catch(function (error) {
+
+                document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+            })
+    </script>
+
+</body>
+
+</html>

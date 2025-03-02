@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="fi">
+
+<head>
+
+    <title>Toteutus</title>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Abyssinica SIL' rel='stylesheet'>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <ul>
+        <li><a href="tehtava_1.html">Opintojakso</a></li>
+        <li><a href="toteutus.html">Toteutus</a></li>
+        <li><a href="tapahtumat.html">Tapahtumat</a></li>
+        <li><a href="saa.html">Sää</a></li>
+        <li><a href="liikennekamerat.html">Liikennekamerat</a></li>
+        <li><a href="junat.html">Junat</a></li>
+    </ul>
+
+    <div id="vastaus">
+    </div>
+
+    <script>
+        //Funktio tietojen hakemiseen
+        function kerro(data) {
+
+            var teksti = "";
+
+            teksti = "<h1>" + "Toteutus" + "</h1>";
+
+            teksti = teksti + "<p>" + "<b>" + "Toteutus" + "</b>" + "<br>"
+
+                + data.toteutus.nimi + "<br>"
+
+                + data.toteutus.lukumaara + "<br>"
+
+                + data.toteutus.osallistujat + "<br>"
+
+                + data.toteutus.ajankohta + "<br>"
+
+                + data.toteutus.kesto + "</p>";
+            //kuva sivuston kuvitusta varten
+            if (data.toteutus.kuva) {
+                teksti = teksti + "<img src='" + data.toteutus.kuva + "' alt='Kuva' style='max-width: 30%; height: auto; border-radius:  30%'><br>";
+            }
+
+            document.getElementById("vastaus").innerHTML = teksti;
+        }
+
+        // Funktio API-pyyntöön ja vastauksen käsitteleminen
+
+        fetch('https://aissatadiarra.github.io/harkkasivu.github.io/tehtava_2.json')
+
+            .then(function (response) {
+
+                return response.json();
+            })
+
+            .then(function (responseJson) {
+
+                kerro(responseJson);
+
+            })
+
+            .catch(function (error) {
+
+                document.getElementById("vastaus").innerHTML = "<p>Tietoa ei pystytä hakemaan</p>";
+            })
+    </script>
+
+</body>
+
+</html>
